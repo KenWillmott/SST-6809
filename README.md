@@ -6,6 +6,8 @@ http://searle.x10host.com/6809/Simple6809.html
 and committed to a PCB design by Jeff Tranter:
 http://jefftranter.blogspot.com/2019/01/a-6809-single-board-computer.html
 
+https://github.com/KenWillmott/SST-6809/blob/main/stplus.png
+
 It can be seen that what I call the Searle-Tranter design, has the following features:
 - minimal ICs needed to make a useful stand alone system
 - no PAL, GAL, or other programmable support logic ("glue") IC's, instead only standard 74xx MSI logic parts
