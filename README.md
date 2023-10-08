@@ -1,12 +1,12 @@
 # SST-6809
 MC6809 Single Board Computer
 
+![stplus](https://github.com/KenWillmott/SST-6809/assets/17345651/79f8bfa9-7ee8-4123-8c67-81ffb22ece3e)
+
 The SST is a stand alone MC6809 computer. It is inspired by the simple MC6809 SBC designed by Grant Searle:
 http://searle.x10host.com/6809/Simple6809.html
 and committed to a PCB design by Jeff Tranter:
 http://jefftranter.blogspot.com/2019/01/a-6809-single-board-computer.html
-
-![stplus](https://github.com/KenWillmott/SST-6809/assets/17345651/79f8bfa9-7ee8-4123-8c67-81ffb22ece3e)
 
 It can be seen that what I call the Searle-Tranter design, has the following features:
 - minimal ICs needed to make a useful stand alone system
