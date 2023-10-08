@@ -20,6 +20,7 @@ The SST-6809 maintains the same overall approach, while adding some improvements
 - 512kb NVRAM provides 32kb main and 480kb random access, battery backed up storage
 - 32kb EEPROM
 - option to swap NVRAM and EEPROM (thus theoretically possible to run with no EEPROM installed)
+- option to use either USB adapter power, or 5V provided at screw connector terminals
 
 The 10cm x 10cm form factor, including connector and mounting locations, create a "family" of boards that can interoperate in different ways. As a very minimal board, the SST does not support all of them, however its connector will support one standard periperal card in the M8 family, such as the M8 game board.
 
