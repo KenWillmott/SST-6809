@@ -15,7 +15,7 @@ It can be seen that what I call the Searle-Tranter design, has the following fea
 - entirely through hole, DIP IC construction consistent with a vintage design. No surface mount components at all
 
 The SST-6809 maintains the same overall approach, while adding some improvements and enhancements. Thus it is a "Super Searle Tranter" or SST. The fundamental features are:
-- fairly granular address decoding, using only 3 74xx devices and one address latch for expanded memory
+- fairly granular address decoding, using only 4 74xx devices and one address latch for expanded memory
 - full featured expansion bus, game card is already available
 - separate UART and CPU clocks, allowing the MCU to run at the maximum 2.0MHz with the same 115200 baud communications
 - 512kb NVRAM provides 56kb main and 456kb random access, battery backed up storage
