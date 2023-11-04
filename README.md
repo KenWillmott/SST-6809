@@ -18,9 +18,8 @@ The SST-6809 maintains the same overall approach, while adding some improvements
 - fairly granular address decoding, using only 3 74xx devices and one address latch for expanded memory
 - full featured expansion bus, game card is already available
 - separate UART and CPU clocks, allowing the MCU to run at the maximum 2.0MHz with the same 115200 baud communications
-- 512kb NVRAM provides 32kb main and 480kb random access, battery backed up storage
-- 32kb EEPROM
-- option to swap NVRAM and EEPROM (thus theoretically possible to run with no EEPROM installed)
+- 512kb NVRAM provides 56kb main and 456kb random access, battery backed up storage
+- 32kb EEPROM jumper and software selectable in 4kb pages.
 - option to use either USB adapter power, or 5V provided at screw connector terminals
 
 The 10cm x 10cm form factor, including standard connector and mounting locations, create a "family" of boards that can interoperate in different ways. As a very minimal board, the SST does not support all of them, however its connector will support one standard peripheral card in the M8 family, such as the M8 game board.
