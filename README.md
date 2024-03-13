@@ -1,7 +1,6 @@
 # SST-6809
 MC6809 Single Board Computer
 
-<img width="502" alt="stplus" src="https://github.com/KenWillmott/SST-6809/assets/17345651/c7692e27-8ab4-494b-81dc-a0a7d3487d96">
 
 
 The SST is a stand alone MC6809 computer. It is inspired by the simple MC6809 SBC designed by Grant Searle:
