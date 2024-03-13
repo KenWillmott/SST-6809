@@ -24,6 +24,8 @@ The SST-6809 maintains the same overall approach, while adding some improvements
 
 The 10cm x 10cm form factor, including standard connector and mounting locations, create a "family" of boards that can interoperate in different ways. As a very minimal board, the SST does not support all of them, however its connector will support one standard peripheral card in the M8 family, such as the M8 game board.
 
-The first PCB (V1.0) status is "assembled and testing". The NVRAM and extended memory address latch pass tests. The EEPROM fails, a problem with the pin assignments has been found. Investigation and fixes are ongoing. It is currently running successfully in a RAM-only configuration, with ASSIST09 monitor.
+The first PCB (V1.0) status was "assembled and testing". The EEPROM fails, a problem with the pin assignments was found.
 
-The second PCB, V2.0, is in fabrication.
+The second and third PCB, V2.0 and V2.1, were completed. These intermediate versions do work, but V2.0 requires wire jumpers to replace a missing trace.
+
+The current board version, V2.2, is fully operational and has some improvements such as selectable I/O memory address.
