@@ -22,7 +22,7 @@ The SST-6809 maintains the same overall approach, while adding some improvements
 - 32kb EEPROM jumper and software selectable in 4kb pages.
 - option to use either USB adapter power, or 5V provided at screw connector terminals
 
-The 10cm x 10cm form factor, including standard connector and mounting locations, create a "family" of boards that can interoperate in different ways. As a very minimal board, the SST does not support all of them, however its connector will support one standard peripheral card in the M8 family, such as the M8 game board.
+The 10cm x 10cm form factor, including standard connector and mounting locations, create a "family" of boards that can interoperate in different ways. As a very minimal board, the SST does not support all of them, however its connector will support up to about 3 standard peripheral card in the M8 family, such as the M8 game board or the M8 6522/proto board.
 
 The first PCB (V1.0) status was "assembled and testing". The EEPROM fails, a problem with the pin assignments was found.
 
