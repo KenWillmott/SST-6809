@@ -29,3 +29,6 @@ The first PCB (V1.0) status was "assembled and testing". The EEPROM fails, a pro
 The second and third PCB, V2.0 and V2.1, were completed. These intermediate versions do work, but V2.0 requires wire jumpers to replace a missing trace.
 
 The current board version, V2.2, is fully operational and has some improvements such as selectable I/O memory address, and socket compatibility of 128/512k NVRAM IC's.
+
+Detailed information can be found at:
+https://exileinparadise.com/sst-6809:top
