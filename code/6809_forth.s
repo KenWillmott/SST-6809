@@ -1,6 +1,13 @@
 ; 6809_forth.s
 ;
 ; 2025-05-12 adapt implementation for SST-6809 K.W.
+; EEPROM support removed
+; Adjust I/O addresses and Forth memory assignments
+; Add words to test for 6809 vs 6309
+; Set base to decimal on cold boot
+; 2025-05-22 Extended memory interface word 'R/W'
+
+; original comments follow
 
 ;*************************************************
 ;                                                *
@@ -94,8 +101,11 @@
 ;           RELEASE AND VERSION NUMBERS          *
 ;                                                *
 ;*************************************************
+
+; end original comments
+
 FIGREL  EQU   1
-FIGREV  EQU   0
+FIGREV  EQU   1
 USRVER  EQU   0
 
 ;*************************************************
@@ -2385,6 +2395,7 @@ COLD    FDB   DOCOL
         FDB   PDOTQ
         FCB   28
         FCC   'Dictionary space available: '
+        FDB   DECA
         FDB   SPAT
         FDB   DP
         FDB   AT
@@ -3243,6 +3254,7 @@ DUMP6   FDB   EMIT
 
 ; Low level mass storage interface (addr block flag R/W)
 ; flag 0=write 1=read
+; only a stub in this version because ROM support needed
 
  	FCB   $83
 	FCC   'R/'
@@ -3250,41 +3262,7 @@ DUMP6   FDB   EMIT
         FDB   DUMP-7
 RW	FDB   *+2
         PSHS  Y         ; Save the instruction pointer
-
-	LDD   2,U	; get block number
-	LSRD
-	LSRB
-	LSRB
-	LSRB
-	LSRB		; D := D/32 extract extended page value
-	ORB   #$80	; status LED off
-	STB   MEMLAT	; set up paging latch
-	PULU  D 	; get flag, user stack is now (addr block)
-	CMPD  #0
-	BEQ   DWRITE	; check for read or write operation
-			; This is a read operation (extended memory to buffer)
-	LDD   ,U	; get block number (low bits * 256)
-	LSRD
-	LSRD		; D*4 = main memory address is in D
-	ANDA  #$03	; mask block offset index
-	ANDB  #$E0	; mask block offset index
-        TFR   D,Y	; Source in Y
-        
-        LDD   2,U	; get addr (dest)
-	TFR   D,X	; addr in X
-        ADDD  #KBBUF    ; Add block size to the destination address
-	STD   ,U	; save for loop completion test
-RMOV1   LDA   ,Y+           ; Do the move
-        STA   ,X+
-        CMPX  ,U            ; At the final destination?
-        BLS   RMOV1         ; If not, continue
-        BRA   RWEND
-	
-DWRITE	
-
-RWEND	CLRA
-	STA   MEMLAT	; restore latch base value
-	LEAU  4,U            ; drop parameters from stack
+	LEAU  6,U            ; drop parameters from stack
         PULS  Y              ; Restore the instruction pointer
         LDX   ,Y++           ; NEXT
         JMP   [,X++]
