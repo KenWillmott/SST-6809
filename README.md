@@ -32,3 +32,5 @@ The current board version, V2.2, is fully operational and has some improvements 
 
 Detailed information can be found at:
 https://exileinparadise.com/sst-6809:top
+as well as the wiki:
+https://github.com/KenWillmott/SST-6809/wiki
